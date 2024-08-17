@@ -43,6 +43,7 @@ const evolutions = computed(() => {
 
 onMounted(() => {
   if (route.params.id) {
+    storeTeam.loadTeam(false)
     const pokemon = storeTeam.loadPokemon(route.params?.id as string)
     if (!pokemon) {
       router.push('/')
