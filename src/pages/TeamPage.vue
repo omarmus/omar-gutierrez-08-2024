@@ -2,12 +2,14 @@
   <h1 class="text-gradient">My team</h1>
   <div class="pokemons" v-if="pokemons.length > 0">
     <div
+      v-if="pokemons.length > 0"
       v-for="item in pokemons"
       :key="item.name"
       class="pokemon-data-card">
       <PokemonCard :item="item" />
       <PokemonData :item="item" />
     </div>
+    <div v-else>Empty team</div>
   </div>
 </template>
 
